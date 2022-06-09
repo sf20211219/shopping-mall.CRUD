@@ -20,3 +20,24 @@ function add() {
     Cell7.innerText = document.getElementById("adress").value;
     // 셀에 넣을 값들을 각각의 id들의 text에 입력한 value 값으로 입력
 }
+
+
+function search() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("Name_Input");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("list");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[2]; // "이름"만을 기준으로 검색 가능
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
