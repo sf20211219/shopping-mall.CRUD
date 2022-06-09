@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="ofen soft team 10">
+    <meta name="description" content="shopping mall CRUD project">
+    <title>Main page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: white;
+            text-align: center;
+        }
+        section {
+            height: 100vh;
+            background-image: url("./background-2.jpg");
+            background-repeat: no-repeat; /*back 반복 안함*/
+            background-position: center center;
+            background-size: cover; /*back 사이즈 화면 크기 별로 변경*/
+        }
+        
+        ul li {
+            list-style-type: none; /*리스트 개요 삭제*/
+        }
+        h3 {
+            text-align: center;
+            color: white;
+        }
+        a {
+            text-decoration-line: none; /*링크 밑줄 없애기*/
+            color: inherit; /*링크 색상 제거*/
+        }
+        
+        .menu {
+            background: url(./icon-1.jpg);
+            background-size: 30px 30px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 999;
+            position: absolute;
+            top: 15px;
+            left: 25px;
+        }
+        .menu.active {
+            background: url("./icon-2.jpg");
+            background-size: 30px 30px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 999;
+            top: 15px;
+            left: 25px;
+        }
+        .side_menu {
+            width: 30%;
+            height: 100%;
+            top: 0; /*여기가 문제!!*/
+            position: absolute;
+            display: none;
+            text-align: center;
+            background-color: black;
+            opacity: 80%;
+            position: fixed; /*bottom으로 안땡겨지던거 해결*/
+        }
+        .side_menu.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body oncontextmenu="retrun false" onselect="retrun false" ondragstart="return false"> <!--우클릭/블록/드래그 방지-->
+    <header>
+        <a href="./main.html"><h2>ofen software team10</h2></a>
+        <nav>
+            <div class="menu" onclick="sideMenu();"></div>
+            <div  class="side_menu" onclick="sideMenu();">
+                <ul>
+                    <a href="./main.html"><li><h3>Main page</h3></li></a>
+                    <a href="../sign/ShoppingMall_Login.html"><li><h3>Sign In</h3></li></a>
+                    <a href="../sign/ShoppingMall_SignUp.html"><li><h3>Sign Up</h3></li></a>
+                    <a href="../manage/ManagePage.html"><li><h3>Manage Page</h3></li></a>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                function sideMenu() {
+                    let menu = document.querySelector(".menu");
+                    let side_menu = document.querySelector(".side_menu");
+                    menu.classList.toggle("active");
+                    side_menu.classList.toggle("active");
+                }
+            </script>
+        </nav>
+    </header>
+    <section>
+        <!--mainpage img-->
+    </section>
+</body>
+</html>
