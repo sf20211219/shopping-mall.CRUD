@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <title>Manage Page</title>
+    <style type="text/css">
+        h2 {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        #Box1 {
+            width: 300px;
+            float: left;
+        }
+        #Box1 label{
+            display: block;
+            float: left;
+            width: 100px;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            border-radius: 7px;
+        }
+        .center {
+            text-align: center;
+        }
+        nav {
+            color: lightgray;
+            text-align: center;
+            font-size: 13pt;
+        }
+        a {
+            text-decoration-line: none;
+            color: inherit;
+        }
+    </style>
+    <body>
+        <nav>
+            <a href="main.html"><strong>Main Page </strong></a> /   
+            <a href="ShoppingMall_Login.html"><strong>Sign In </strong></a> /   
+            <a href="ShoppingMall_SignUp.html"><strong>Sign Up </strong></a> /   
+            <a href="ManagePage.html"><strong>Manage page </strong></a>
+        </nav>
+
+        <!--            회원 입력 파트 시작         -->
+        <h1>회원정보 관리 페이지</h1><br>
+        <h2>회원 등록</h2>
+        <form>
+            <table border="1">
+                <th>ID</th> <th>PW</th> <th>이름</th> <th>전화번호</th> <th>이메일</th> <th>우편번호</th> <th>주소</th>
+                <tr>
+                    <td> <input type="text" id="ID" name="ID" size="5"> </td>
+                    <td> <input type="text" id="PW" name="PW"> </td>
+                    <td> <input type="text" id="Fullname" name="FullName" size="5"> </td>
+                    <td> <input type="tel" id="PH" name="Phone_Number" size="15"> </td>
+                    <td> <input type="email" id="email" name="E-mail" size="25"> </td>
+                    <td> <input type="text" id="Postal" name="Postal_Code" size="5"> </td>
+                    <td> <input type="text" id="adress" name="Adress" size="50"> </td>
+                </tr>
+            </table>
+            <br>
+            <div class="center">
+                <input type="button" value="등록" onclick="add();">
+                <button type="reset">초기화</button>
+            </div>
+        </form> <br>
+        <!--            회원 입력 파트 끝         -->
+
+        <!--            회원 등록 리스트         -->
+        <h2>회원 리스트</h2>
+        <table id="list" border="1">
+            <tr>
+                <th>ID</th> <th>PW</th> <th>이름</th> <th>전화번호</th> <th>이메일</th> <th>우편번호</th> <th>주소</th>
+            </tr>
+        </table><br><br>
+        <!--            회원 등록 리스트         -->
+        <script type="text/javascript" src="ManagePageJavaScript.js">
+
+        </script>
+    </body>
+</html>
