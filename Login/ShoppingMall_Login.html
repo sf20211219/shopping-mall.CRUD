@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>로그인</title>
+    <style type="text/css">
+        body {
+            height: 105vh;
+            background-image: url("background-3.jpg");
+            background-repeat: no-repeat; /*back 반복 안함*/
+            background-position: center center;
+            background-size: cover; /*back 사이즈 화면 크기 별로 변경*/
+        }
+        h2 {
+            color: white;
+        }
+        form {
+            text-align: center; 
+            margin-top: 20%; margin-left: 30%; margin-right: 30%;
+        }
+        nav {
+            color: wheat;
+            text-align: center;
+            font-size: 13pt;
+        }
+        a {
+            text-decoration-line: none; /*링크 밑줄 없애기*/
+            color: inherit; /*링크 색상 제거*/
+        }
+        .input_show {
+            letter-spacing: 10px;
+            padding: 5px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <nav>
+        <a href="main.html"><strong>Main Page </strong></a> /   
+        <a href="ShoppingMall_Login.html"><strong>Sign In </strong></a> /   
+        <a href="ShoppingMall_SignUp.html"><strong>Sign Up </strong></a> /   
+        <a href="ManagePage.html"><strong>Manage Page</strong></a>
+    </nav>
+    <form>
+        <h2>SIGN IN</h2>
+        <input type="text" name="First_name" class="input_show" placeholder="ID"><br><br>
+        <input type="password" name="Second_name" class="input_show" placeholder="PW">
+        <br><br>
+        <button type="submit" name="Login" id="login">Login</button> 
+        <a href="ShoppingMall_SignUp.html"><input type="button" name="signup" id="Signup" value="Sign Up"></a>
+
+    </form>
+</body>
