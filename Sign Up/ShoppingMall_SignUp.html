@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <title> 회원가입 </title>
+    <style type="text/css">
+        body {
+            height: 167vh;
+            background-image: url("background-3.jpg");
+            background-repeat: no-repeat; /*back 반복 안함*/
+            background-position: center center;
+            background-size: cover; /*back 사이즈 화면 크기 별로 변경*/
+        }
+        h2 {
+            text-align: center;
+            margin-top: 10%;
+            color: white;
+        }
+        form {
+            text-align: center;
+        }
+        table {
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        nav {
+            margin-top: 29px ;
+            color: wheat;
+            text-align: center;
+            font-size: 13pt;
+        }
+        a {
+            text-decoration-line: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="main.html"><strong>Main Page </strong></a> /   
+        <a href="ShoppingMall_Login.html"><strong>Sign In </strong></a> /   
+        <a href="ShoppingMall_SignUp.html"><strong>Sign Up </strong></a> /   
+        <a href="ManagePage.html"><strong>Manage page </strong></a>
+    </nav>
+    <h2>SIGN UP</h2> <br>
+    <form>
+        <input type="text" id="ID" placeholder="Please input ID"><br>
+        <input type="password" id="PW" placeholder="Please input PW"><br>
+        <input type="password" id="RePW" placeholder="One more time input PW"><br>
+        <button type="submit" id="Check">Check ID</button>
+        <br> <br>
+        <input type="text" id="First_name" size="7" placeholder="First Name">
+        <input type="text" id="Second_name" size="10" placeholder="Second Name"><br>
+        <input type="tel" id="Phone number" size="23" placeholder="Phone Number"> <br> 
+        <input type="text" id="email" size="23" placeholder="Please input E-mail"><br> <br>
+        <pre>
+<input type="button" value="Find postal code...">                                       
+<input type="text" id="Postal Code" size="8" placeholder="Postal Code">                                           
+<input type="text" id="Home Adress" size="50" placeholder="Your home adress"> <br>
+        </pre>
+        <br>
+        <table border="1">
+            <tr>
+                <td><strong>이용약관 동의</strong></td> 
+                <td> <input type="checkbox"> 동의 </td>
+            </tr>
+            <tr>
+                <td><strong>개인정보 수집 및 이용 동의</strong></td>
+                <td> <input type="checkbox"> 동의 </td>
+            </tr>
+            <tr>
+                <td><strong>위치기반서비스 이용약관 동의</strong></td>
+                <td> <input type="checkbox"> 동의 </td>
+            </tr>
+            <tr>
+                <td><strong>SNS 수신 동의</strong></td>
+                <td> <input type="checkbox"> 동의 </td>
+            </tr>
+        </table> 
+        <br>
+        <button type="submit">Sign Up</button> <br> <br>
+        <a href="ShoppingMall_Login.html"><input type="button" id="SignIn" value="Sign In"></a>
+        <button type="reset" id="Reset">Reset</button>
+    </form>
+</body>
