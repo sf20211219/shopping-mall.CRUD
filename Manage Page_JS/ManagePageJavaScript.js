@@ -1,6 +1,6 @@
-function add() {
+function add() {   //회원 입력
     const table = document.getElementById("list");
-    
+
     const Newline = table.insertRow();
 
     const Cell1 = Newline.insertCell(0); // 첫 번째 셀 생성
@@ -11,8 +11,8 @@ function add() {
     const Cell6 = Newline.insertCell(5); // 여섯 번째 셀 생성
     const Cell7 = Newline.insertCell(6); // 일곱 번째 셀 생성
 
-    Cell1.innerText = document.getElementById("ID").value; 
-    Cell2.innerText = document.getElementById("PW").value;
+    Cell1.innerHTML = "<th><input type='checkbox' id='Check' name='CheckBox' class='allCheck()'></th>"
+    Cell2.innerText = document.getElementById("ID").value;
     Cell3.innerText = document.getElementById("Fullname").value;
     Cell4.innerText = document.getElementById("PH").value;
     Cell5.innerText = document.getElementById("email").value;
@@ -21,8 +21,10 @@ function add() {
     // 셀에 넣을 값들을 각각의 id들의 text에 입력한 value 값으로 입력
 }
 
+    
 
-function search() {
+
+function search() {  //회원 검색
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("Name_Input");
     filter = input.value.toUpperCase();
@@ -39,5 +41,38 @@ function search() {
                 tr[i].style.display = "none";
             }
         }
+    }
+}
+
+function allDelete() { //리스트 전체선택
+    const checkboxes = document.querySelectorAll('input[name="CheckBox"]');
+    const checked = document.querySelectorAll('input[name="CheckBox"]:checked');
+    const selectAll= document.querySelector('input[name="selectall"]');
+                
+    if(checkboxes.length === checked.length) {
+        selectAll.checked = true;
+    }
+    else {
+        selectAll.checked = false;
+    }
+}
+
+function selectAll(selectAll) {
+    const checkboxes = document.getElementsByName("CheckBox");
+                
+    checkboxes.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked
+    })
+}
+
+function checkDelete() { //선택 리스트 삭제
+    var checkDel = document.getElementById('list');
+    for(var i=1; i<checkDel.rows.length; i++) {
+    var chkBox = checkDel.rows[i].cells[0].childNodes[0].checked;
+                    
+    if(chkBox) {
+        checkDel.deleteRow(i);
+        i--;
+    }
     }
 }
